@@ -1,0 +1,18 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+{% block meta %}Welcome to the landing page of Frank the Dentist, The best dentist in town{% endblock meta %}
+{% block title %}contact thank you{% endblock title %}
+{% block content %}
+<div class="jumbotron text-center">
+  <h1 class="display-3">Thank You {{ message_name }}!</h1>
+  <p class="lead"><strong>We will review your message and provide feedback as soon as possible</strong></p>
+  <hr>
+  <p>
+    Having trouble? <a href="{% url 'contact' %}">Contact us</a>
+  </p>
+  <p class="lead">
+    <a class="btn btn-primary btn-sm" href="{% url 'index' %}" role="button">Continue to homepage</a>
+  </p>
+</div>
+
+{% endblock %}

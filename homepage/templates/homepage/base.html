@@ -36,18 +36,18 @@
           <!-- Top Content -->
           <div class="col-6 col-md-9 col-lg-8">
             <div class="top-header-content">
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="28 Jackson Street, Chicago, 7788569 USA"><i class="fa fa-map-marker"></i> <span>28 Jackson Street, Chicago, 7788569 USA</span></a>
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="info.dento@gmail.com"><i class="fa fa-envelope"></i> <span>info.dento@gmail.com</span></a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="28 Kenyatta Avenue Street, Nairobi, +254700520718 Kenya"><i class="fa fa-map-marker"></i> <span>28 Kenyatta Avenue Street, Nairobi, +254700520718 Kenya</span></a>
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="franklinokech@gmail.com"><i class="fa fa-envelope"></i> <span>franklinokech@gmail.com</span></a>
             </div>
           </div>
           <!-- Top Header Social Info -->
           <div class="col-6 col-md-3 col-lg-4">
             <div class="top-header-social-info text-right">
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+              <a href="https://facebook.com/franklinokech/" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/franklinokech" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+<!--              <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a>-->
+              <a href="https://www.linkedin.com/in/franklinokech/" data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/franklinokech" data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa fa-github"></i></a>
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@
           <nav class="classy-navbar justify-content-between" id="dentoNav">
 
             <!-- Logo -->
-            <a class="nav-brand" href="index.html"><img src="{% static 'homepage/img/core-img/logo.png' %}" alt=""></a>
+            <a class="nav-brand" href="{% url 'index' %}"><img src="{% static 'homepage/img/core-img/logo.png' %}" alt=""></a>
 
             <!-- Navbar Toggler -->
             <div class="classy-navbar-toggler">
@@ -81,11 +81,11 @@
               <!-- Nav Start -->
               <div class="classynav">
                 <ul id="nav">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="service.html">Service</a></li>
-                  <li><a href="pricing.html">Pricing</a></li>
-                  <li><a href="./contact.html">Contact</a></li>
+                  <li><a href="{% url 'index' %}">Home</a></li>
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'service' %}">Service</a></li>
+                  <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                  <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
               </div>
               <!-- Nav End -->
@@ -110,12 +110,12 @@
         <!-- Single Footer Widget -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-footer-widget">
-            <a href="./index.html" class="d-block mb-4"><img src="{% static 'homepage/img/core-img/logo.png' %}" alt=""></a>
+            <a href="{% url 'index' %}" class="d-block mb-4"><img src="{% static 'homepage/img/core-img/logo.png' %}" alt=""></a>
             <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
             <div class="footer-contact">
               <p><i class="icon_pin"></i> 28 Jackson Street, Chicago, 7788569 USA</p>
               <p><i class="icon_phone"></i> +84. 2252. 2250. 122</p>
-              <p><i class="icon_mail"></i> info.dento@gmail.com</p>
+              <p><i class="icon_mail"></i> franklinokech@gmail.com@gmail.com</p>
             </div>
           </div>
         </div>
@@ -146,15 +146,15 @@
             <!-- Quick Links Nav -->
             <nav>
               <ul class="quick-links">
-                <li><a href="#">About</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
                 <li><a href="#">Policy</a></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Advisors</a></li>
                 <li><a href="#">Careers</a></li>
                 <li><a href="#">Dentist</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="{% url 'service' %}">Services</a></li>
                 <li><a href="#">Legals</a></li>
               </ul>
             </nav>
@@ -178,11 +178,11 @@
 
             <!-- Social Info -->
             <div class="footer-social-info">
-              <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-              <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+              <a href="https://facebook.com/franklinokech/" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/franklinokech" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+<!--          <a href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a>-->
+              <a href="https://www.linkedin.com/in/franklinokech/" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/franklinokech" data-toggle="tooltip" data-placement="top" title="Github"><i class="fa fa-github"></i></a>
             </div>
           </div>
         </div>

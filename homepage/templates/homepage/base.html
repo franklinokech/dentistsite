@@ -92,7 +92,7 @@
             </div>
 
             <!-- Booking Now Button -->
-            <a href="#" class="btn dento-btn booking-btn">Booking Now</a>
+            <a href="{% url 'booking' %}" class="btn dento-btn booking-btn">Booking Now</a>
           </nav>
         </div>
       </div>
@@ -170,8 +170,9 @@
             <p>We will send out weekly newest article and some great offers</p>
             <!-- Newsletter Form -->
             <div class="footer-newsletter-form">
-              <form action="#" method="post">
-                <input type="email" name="nl-email" value="" placeholder="Email Address">
+              <form action="{% url 'newsletter' %}" method="post" name="newsletter", id="newsletter">
+                {% csrf_token %}
+                <input type="email" name="nl-email" value="" placeholder="Email Address" required>
                 <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
               </form>
             </div>

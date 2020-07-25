@@ -58,7 +58,7 @@
         <!-- About Us Thumbnail -->
         <div class="col-12 col-md-6">
           <div class="about-us-thumbnail mb-50">
-            <img src="{% static 'homepage/img/bg-img/15.jpg' %}" alt="">
+            <img src="{% static 'homepage/img/bg-img/dentis_surgery.jpeg' %}" alt="">
           </div>
         </div>
         <!-- About Content -->
@@ -338,7 +338,8 @@
         <div class="col-12">
           <!-- Appointment Form -->
           <div class="appointment-form">
-            <form action="#" method="post">
+            <form action="{% url 'booking' %}" method="post" name="booking" id="booking">
+                {% csrf_token %}
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group mb-30">
@@ -357,24 +358,18 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-30">
-                    <input type="text" name="your-address" class="form-control" placeholder="Your Address">
+                    <input type="text" name="your-address" class="form-control" placeholder="Your Address" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-30">
-                    <select name="your-scheldule" class="form-control">
-                      <option value="Choose Your Scheldule">Choose Your Scheldule</option>
-                      <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                      <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                      <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                      <option value="8 PM to 10 PM">8 PM to 10 PM</option>
-                    </select>
+                      <input type="date" name="your-schedule" class="form-control" placeholder="Your Schedule" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group mb-30">
-                    <select name="your-time" class="form-control">
-                      <option value="Choose Your Time">Choose Your Scheldule</option>
+                    <select name="your-time" class="form-control" required>
+                      <option value="Choose Your Time">Choose Your Schedule</option>
                       <option value="9 AM to 10 AM">9 AM to 10 AM</option>
                       <option value="11 AM to 12 PM">11 AM to 12 PM</option>
                       <option value="2 PM to 4 PM">2 PM to 4 PM</option>
@@ -384,7 +379,7 @@
                 </div>
                 <div class="col-12">
                   <div class="form-group mb-30">
-                    <textarea name="your-message" class="form-control" placeholder="Your Message"></textarea>
+                    <textarea name="your-message" class="form-control" placeholder="Your Message" required></textarea>
                   </div>
                 </div>
                 <div class="col-12 text-center">
@@ -416,7 +411,28 @@
         <!-- Single Dentist Area -->
         <div class="col-12 col-sm-6 col-md-4">
           <div class="single-dentist-area mb-100">
-            <img src="{% static 'homepage/img/bg-img/9.png' %}" alt="">
+            <img src="{% static 'homepage/img/bg-img/franklin.jpg' %}" alt="">
+            <!-- Dentist Content -->
+            <div class="dentist-content">
+              <!-- Social Info -->
+              <div class="dentist-social-info">
+                <a href="https://facebook.com/franklinokech/"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/franklinokech"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/franklinokech/"><i class="fa fa-linkedin"></i></a>
+              </div>
+              <!-- Dentist Info -->
+              <div class="dentist-info bg-gradient-overlay">
+                <h5>Franklin Okech</h5>
+                <p>Founder CEO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single Dentist Area -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="single-dentist-area mb-100">
+            <img src="{% static 'homepage/img/bg-img/reddington.jpg' %}" alt="">
             <!-- Dentist Content -->
             <div class="dentist-content">
               <!-- Social Info -->
@@ -427,7 +443,7 @@
               </div>
               <!-- Dentist Info -->
               <div class="dentist-info bg-gradient-overlay">
-                <h5>Michael Barley</h5>
+                <h5>Raymond Reddington</h5>
                 <p>Implant Expert</p>
               </div>
             </div>
@@ -437,7 +453,7 @@
         <!-- Single Dentist Area -->
         <div class="col-12 col-sm-6 col-md-4">
           <div class="single-dentist-area mb-100">
-            <img src="{% static 'homepage/img/bg-img/10.png' %}" alt="">
+            <img src="{% static 'homepage/img/bg-img/nikita.jpeg' %}" alt="">
             <!-- Dentist Content -->
             <div class="dentist-content">
               <!-- Social Info -->
@@ -448,28 +464,7 @@
               </div>
               <!-- Dentist Info -->
               <div class="dentist-info bg-gradient-overlay">
-                <h5>Michael Barley</h5>
-                <p>Implant Expert</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Dentist Area -->
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="single-dentist-area mb-100">
-            <img src="{% static 'homepage/img/bg-img/11.png' %}" alt="">
-            <!-- Dentist Content -->
-            <div class="dentist-content">
-              <!-- Social Info -->
-              <div class="dentist-social-info">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-              </div>
-              <!-- Dentist Info -->
-              <div class="dentist-info bg-gradient-overlay">
-                <h5>Michael Barley</h5>
+                <h5>Nikita</h5>
                 <p>Implant Expert</p>
               </div>
             </div>
